@@ -14,8 +14,8 @@ var (
 )
 
 func Connect() {
-	envError := godotenv.Load()
-	if envError != nil {
+	err := godotenv.Load()
+	if err != nil {
 		panic("Error importing file .env")
 	}
 
